@@ -29,4 +29,8 @@ class SeriesController extends Controller
         //Retorna ao usuario o conteudo da view "index" dentro de "series", passando como parametro o array "$series"
         return view('series.index', compact('series'));
     }
+
+    public function create() {
+        return view('series.create');
+    }
 }
