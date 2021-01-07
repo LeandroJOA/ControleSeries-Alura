@@ -9,18 +9,12 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1>Séries</h1>
+            {{-- Substitui este @yield pelo conteudo da section "cabecalho" que extender este layout --}}
+            <h1>@yield('cabecalho')</h1>
         </div>
 
-        <a href="/series/criar" class="btn btn-dark mb-2">Adicionar</a>
-
-        <ul class="list-group">
-            <!-- Cria um item na lista para cada "serie", contida dentro de "series" -->
-            <?php foreach ($series as $serie): ?>
-                <li class="list-group-item"> <?= $serie; ?> </li>
-            <?php endforeach; ?>
-        </ul>
+        {{-- Substitui este @yield pelo conteudo da section "conteudo" que extender este layout --}}
+        @yield('conteudo')
     </div>
 </body>
 </html>
-
