@@ -12,4 +12,4 @@
 */
 
 // Chama o controller "SeriesController" acionando a função "listarSeries()
-Route::get('/series', 'SeriesController@listarSeries');
+Route::get('/series', 'SeriesController@index');
