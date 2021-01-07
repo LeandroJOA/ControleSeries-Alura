@@ -26,16 +26,7 @@ class SeriesController extends Controller
             'Agents of SHIELD'
         ];
 
-        // Abre a tag "ul"
-        $html = "<ul>";
-        // Percorre todo o array de series, e concatena cada um como um "li"
-        foreach ($series as $serie) {
-            $html .= "<li>$serie</li>";
-        }
-        //Concatena o fechamento da tag "ul"
-        $html .= "</ul>";
-
-        //Retorna ao usuario o conteudo da variavel "$html"
-        return $html;
+        //Retorna ao usuario o conteudo da view "index" dentro de "series", passando como parametro o array "$series"
+        return view('series.index', compact('series'));
     }
 }
