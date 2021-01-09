@@ -13,7 +13,8 @@
     <ul class="list-group">
         <!-- Cria um item na lista para cada "serie", contida dentro de "series" -->
         @foreach($series as $serie)
-            <li class="list-group-item"> <?= $serie; ?> </li>
+            {{-- {{}} - Imprime o valor "nome" do array "series" recebido pelo controller }}--}}
+            <li class="list-group-item"> {{ $serie->nome }} </li>
         @endforeach
     </ul>
 @endsection

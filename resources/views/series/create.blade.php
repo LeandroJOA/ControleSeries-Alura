@@ -9,6 +9,8 @@
 {{-- Substitui o "@yield" de nome "conteudo" pelo conteudo desta "section" --}}
 @section('conteudo')
     <form method="post">
+        {{-- Token para permitir o envio de dados atraves de um formulario --}}
+        @csrf
         <div class="form-group">
             <label for="nome" class="">Nome</label>
             <input type="text" class="form-control" name="nome" id="nome">
